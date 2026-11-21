@@ -48,7 +48,7 @@ public class MyLinkedList<T> implements ListMethods<T>{
     }
 
     @Override
-    public boolean insert(T value, int index) throws IndexOutOfBoundsException{
+    public boolean insert(T value, int index) {
 
         if (index < 0 || index > size) throw new IndexOutOfBoundsException("Неверный индекс");
         Node<T> element = new Node<>(value);
@@ -117,7 +117,7 @@ public class MyLinkedList<T> implements ListMethods<T>{
     
     //только по индексу
     @Override
-    public boolean removeAt(int index) throws IndexOutOfBoundsException{
+    public boolean removeAt(int index) {
         if (index < 0 || index >= size) throw new IndexOutOfBoundsException("Неверный индекс");
         Node<T> cur = head;
 
@@ -216,7 +216,7 @@ public class MyLinkedList<T> implements ListMethods<T>{
     }
 
     @Override
-    public T getElementByIndex(int index) throws IndexOutOfBoundsException {
+    public T getElementByIndex(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Неверный индекс");
         }
